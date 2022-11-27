@@ -1,0 +1,24 @@
+{
+    "products":[
+        {"_id":1,"name":"Food Colouring - Red","slug":"Precious Metals"},
+        {"_id":2,"name":"Apple - Chilena","slug":"Major Pharmaceuticals"},
+        {"_id":3,"name":"Pail With Metal Handle 16l White","slug":"Major Pharmaceuticals"},
+        {"_id":4,"name":"Green Apple","slug":"Real Estate Investment Trusts"},
+        {"_id":5,"name":"Pears - Anjou","slug":"Paper"},
+        {"_id":6,"name":"Dehydrated Kelp Kombo","slug":"Specialty Insurers"},
+        {"_id":7,"name":"Hog / Sausage Casing - Pork","slug":"ZODIAC"},
+        {"_id":8,"name":"Cake - Dulce De Leche","slug":"Services-Misc. Amusement & Recreation"},
+        {"_id":9,"name":"Pernod","slug":"Oil/Gas Transmission"},
+        {"_id":10,"name":"Plate Pie Foil","slug":"Environmental Services"},
+        {"_id":11,"name":"Wine - Red, Pelee Island Merlot","slug":"Oil & Gas Production"},
+        {"_id":12,"name":"Wine - Gato Negro Cabernet","slug":"Major Pharmaceuticals"},
+        {"_id":13,"name":"Wine - White","slug":"Major Chemicals"},
+        {"_id":14,"name":"Apple - Israel","slug":"Home Furnishings"},
+        {"_id":15,"name":"Cake chocolate","slug":"Industrial Specialties"},
+        {"_id":16,"name":"Scrubbie - Scotchbrite Hand Pad","slug":"Electric Utilities: Central"},
+        {"_id":17,"name":"Pie Shell - 5","slug":"ZODIAC"},
+        {"_id":18,"name":"Tomato Paste","slug":"Real Estate Investment Trusts"},
+        {"_id":19,"name":"Steam Pan - Half Size Deep","slug":"Major Pharmaceuticals"},
+        {"_id":20,"name":"Mushroom - Chanterelle, Dry","slug":"Real Estate Investment Trusts"}
+    ]
+}

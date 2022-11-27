@@ -1,0 +1,97 @@
+<div class="container-fluid pt-2 pb-2 pl-2 pr-2" style="background: #FFFFFF;" >
+    <h1 class="col-12 text-center">Productos</h1>
+    <div class="row">
+        <div class="col">
+            <div class="card pr-3 pl-3">
+                <div class="card-body">
+                    <!--CARD-->
+                    <div class="card">
+                        <!--CABECERA-->
+                        <div class="card-header">
+                            <div class="row align-items-center">
+                                <div class="col-md-12 col-lg-6">
+                                    <!--INPUT-->
+                                    <div class="input-group mb-2">
+                                        <div class="input-group-prepend">
+                                            <div class="input-group-text"><i class="bi bi-search"></i></div>
+                                        </div>
+                                        <input type="text" class="form-control"
+                                            placeholder="Buscar ..."
+                                            [(ngModel)]="searcherNameInput"
+                                            (keyup)="filterProducts()"
+                                        />
+                                    </div>
+                                    <div *ngIf="showAlert" class="alert alert-danger">
+                                        Debe escribar mas de 4 letras para filtrar por nombre
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                        <!--CUERPO-->
+                        <div class="card-body">
+                            <!--Tabla-->
+                            <div class="row">
+                                <!--Tabla responsive-->
+                                <div class="col table-responsive">
+                                    <table class="table b-table table-bordered b-table-fixed table-dark">
+                                        <!--Header de la tabla-->
+                                        <thead>
+                                            <tr>
+                                                <th scope="col" class="text-center">
+                                                    ID
+                                                    <span class="badge badge-dark ml-0">
+                                                        <button class="btn-table btn-outline-table">
+                                                            <i (click)="orderByIdAsc()" class="bi bi-arrow-up"></i>
+                                                        </button>
+                                                        <button >
+                                                            <i (click)="orderByIdDesc()" class="bi bi-arrow-down"></i>
+                                                        </button>
+                                                    </span>
+                                                </th>
+                                                <th scope="col" class="text-center">
+                                                    NAME
+                                                    <span class="badge badge-dark ml-0">
+                                                        <button class="btn-table btn-outline-table">
+                                                            <i (click)="orderByNameAsc()" class="bi bi-arrow-up"></i>
+                                                        </button>
+                                                        <button >
+                                                            <i (click)="orderByNameDesc()" class="bi bi-arrow-down"></i>
+                                                        </button>
+                                                    </span>
+                                                </th>
+                                                <th scope="col" class="text-center">
+                                                    SLUG
+                                                    <span class="badge badge-dark ml-0">
+                                                        <button class="btn-table btn-outline-table">
+                                                            <i (click)="orderBySlugAsc()" class="bi bi-arrow-up"></i>
+                                                        </button>
+                                                        <button >
+                                                            <i (click)="orderBySlugDesc()" class="bi bi-arrow-down"></i>
+                                                        </button>
+                                                    </span>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr *ngFor="let product of products | paginate: { itemsPerPage: 5, currentPage: currentPage }" class="table-light">
+                                                <td>{{product._id}}</td>
+                                                <td>{{product.name}}</td>
+                                                <td>{{product.slug}}</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                    <pagination-controls
+                                        (pageChange)="currentPage = $event"
+                                        previousLabel="Anterior"
+                                        nextLabel="Siguiente"
+                                    ></pagination-controls>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
